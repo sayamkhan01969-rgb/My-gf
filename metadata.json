@@ -1,0 +1,6 @@
+{
+  "name": "Zero Two AI",
+  "description": "Mobile-first anime companion web app inspired by Zero Two, featuring intelligent AI chat, expressive animated avatar, voice chat with text-to-speech, and web search grounding.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

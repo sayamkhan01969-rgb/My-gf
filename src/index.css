@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0d0714;
+    color: #f1f0f5;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@keyframes sakuraFall {
+  0% {
+    transform: translate(0, -20px) rotate(0deg) scale(0.8);
+  }
+  25% {
+    transform: translate(15px, 25vh) rotate(90deg) scale(1);
+  }
+  50% {
+    transform: translate(-15px, 50vh) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translate(20px, 75vh) rotate(270deg) scale(1.05);
+  }
+  100% {
+    transform: translate(-10px, 105vh) rotate(360deg) scale(0.8);
+  }
+}
+
+@keyframes animeBreathe {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(255, 42, 133, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 24px rgba(255, 42, 133, 0.8));
+  }
+}
+
+@keyframes soundWave {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 20px;
+  }
+}
+
+.animate-breathe {
+  animation: animeBreathe 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Custom scrollbars for clean mobile & desktop feel */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 59, 129, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 59, 129, 0.5);
+}
